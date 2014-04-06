@@ -1,7 +1,7 @@
 'use strict';
 
 var fs = require('fs');
-var file = fs.readFileSync('./thousandprimes.txt').toString();
+var file = fs.readFileSync(__dirname+'/thousandprimes.txt').toString();
 
 module.exports = file.split(/\s/gi).filter(filter).map(toInt);
 
