@@ -6,15 +6,15 @@ var file = fs.readFileSync(__dirname+'/thousandprimes.txt').toString();
 module.exports = file.split(/\s/gi).filter(filter).map(toInt);
 
 /**
- *	Filter out empty strings
+ *  Filter out empty strings
  */
 function filter (val) {
-	return !!val;
+  return !!val;
 };
 
 /**
- *	Parse out integers
+ *  Parse out integers
  */
 function toInt (val) {
-	return parseInt(val, 10);
+  return parseInt(val, 10);
 };
